@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Caveat Brush", cursive;
+    background: #b7b7a4;
+    color: #fff;
+    height: 100vh;
+    margin: 0;
+    /* Remove default body margin */
+}
+
+h1 {
+    text-align: center;
+    margin: 5%;
+    font-size: 4rem;
+}
+
+.logo img {
+    max-width: 23%;
+}
+
+.logo {
+    position: absolute;
+    top: 4%;
+    left: 2%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    /* Adjust the top margin as needed */
+}
+
+.linkedin-image-button,
+#instagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    /* Adjust the horizontal margin as needed */
+}
+
+.linkedin-image-button img,
+#instagram img {
+    max-width: 50%;
+    max-height: 50%;
+    width: auto;
+    height: auto;
+    display: block;
+    margin: auto;
+    padding: 12%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.linkedin-image-button:hover img,
+#instagram:hover img {
+    transform: scale(1.5);
+}
+
+.linkedin-image-button::before,
+#instagram::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: #ddbea9;
+    border-radius: 20px;
+    transform: translate(-50%, -50%);
+    transform-origin: 50% 50%;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+}
+
+.linkedin-image-button:hover::before,
+#instagram:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
